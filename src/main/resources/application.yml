@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-#          default-value: config-server
+          default-value: main
           uri: https://github.com/pakoMazagon/configServer5
           search-paths: config-data
   application:
