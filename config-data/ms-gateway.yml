@@ -12,6 +12,8 @@ eureka:
 spring:
   cloud:
     gateway:
+      default-filters:
+        - TokenRelay
       discovery:
         locator:
           enabled: true
@@ -20,3 +22,5 @@ spring:
           uri: lb://ms-productos
           predicates:
             - Path=/products/**
+          filters:
+            - RemoveRequestHeader=Cookie
