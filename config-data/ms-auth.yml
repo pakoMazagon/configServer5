@@ -1,0 +1,25 @@
+server:
+  port: ${PORT:${SERVER_PORT:0}}
+  #port: 8081
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:    
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+spring:
+  datasource:
+    url:  jdbc:mysql://localhost:3306/db_auth?serverTimezone=Europe/Madrid&allowPublicKeyRetrieval=true&useSSL=false
+    username: admin
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform:  org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create    
+#mongock:
+#  change-logs-scan-package: rest.elchoco.productos.config.dbmigrations
+
+
