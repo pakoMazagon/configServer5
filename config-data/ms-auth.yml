@@ -12,7 +12,7 @@ eureka:
 spring:
   datasource:
     url:  jdbc:mysql://localhost:3306/auth_user?serverTimezone=Europe/Madrid&allowPublicKeyRetrieval=true&useSSL=false
-    username: admin
+    username: sa
     password: admin
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
