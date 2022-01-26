@@ -12,8 +12,8 @@ eureka:
 spring:
   cloud:
     gateway:
-      default-filters:
-        - TokenRelay
+      #default-filters:
+        #- TokenRelay
       discovery:
         locator:
           enabled: true
@@ -23,7 +23,7 @@ spring:
           predicates:
             - Path=/products/**
           filters:
-            - RemoveRequestHeader=Cookie
+            #- RemoveRequestHeader=Cookie
             - AuthFilter
         - id: ms-auth
           uri: lb://ms-auth
