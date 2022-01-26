@@ -9,17 +9,5 @@ eureka:
       default-zone: http://localhost:8761/eureka
   instance:    
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-spring:
-  datasource:
-    url:  jdbc:mysql://localhost:3306/auth_user?serverTimezone=Europe/Madrid&allowPublicKeyRetrieval=true&useSSL=false
-    username: sa
-    password: admin
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    database-platform:  org.hibernate.dialect.MySQL8Dialect
-    hibernate:
-      ddl-auto: create    
-#mongock:
-#  change-logs-scan-package: rest.elchoco.productos.config.dbmigrations
 
 
