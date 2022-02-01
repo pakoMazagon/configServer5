@@ -16,6 +16,9 @@ spring:
         cors-configurations:
           '[/**]':
             allowedOrigins: "http://localhost:3000"
+            allowed-methods: "*"
+            allowed-headers: "*"
+            allow-credentials: true
       discovery:
         locator:
           enabled: true
