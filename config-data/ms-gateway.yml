@@ -12,8 +12,10 @@ eureka:
 spring:
   cloud:
     gateway:
-      # default-filters:
-        # - TokenRelay
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
       discovery:
         locator:
           enabled: true
@@ -23,25 +25,8 @@ spring:
           predicates:
             - Path=/products/**
           filters:
-            # - RemoveRequestHeader=Cookie
             - AuthFilter
         - id: ms-auth
           uri: lb://ms-auth
           predicates:
             - Path=/auth/**
-#  security:
-#    oauth2:
-#      client:
-#        provider:
-#          keycloak:
-#            authorization-uri: http://127.0.0.1:9090/auth/realms/usuarios_bar/protocol/openid-connect/auth 
-#            userinfo-uri: http://127.0.0.1:9090/auth/realms/usuarios_bar/protocol/openid-connect/userinfo
-#            user-name-attribute: preferred_username
-#            token-uri: http://127.0.0.1:9090/auth/realms/usuarios_bar/protocol/openid-connect/token
-#        registration:
-#          cliente_usuario_bar:
-#            provider: keycloak
-#            client-id: cliente_usuario_bar
-#            client-secret: f9BqlrJTTV43kPr2cBY6bWxHRorvXShj
-#            authorization-grant-type: authorization_code
-#            redirect-uri: "{baseUrl}/login/oauth2/code/cliente_usuario_bar"            
