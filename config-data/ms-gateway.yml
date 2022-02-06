@@ -15,10 +15,10 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOriginsPatterns: "*"
+            allowedOrigins: "*"
             allowed-methods: "*"
             allowed-headers: "*"
-            allow-credentials: true
+            allow-credentials: false
       discovery:
         locator:
           enabled: true
