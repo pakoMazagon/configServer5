@@ -29,6 +29,7 @@ spring:
             - Path=/products/**
           filters:
             - AuthFilter
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
         - id: ms-auth
           uri: lb://ms-auth
           predicates:
