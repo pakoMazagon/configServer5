@@ -15,7 +15,7 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "*"
+            allowedOrigins: *
             allowed-methods: "*"
             allowed-headers: "*"
             allow-credentials: true
