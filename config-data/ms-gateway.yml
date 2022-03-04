@@ -34,3 +34,10 @@ spring:
           uri: lb://ms-auth
           predicates:
             - Path=/auth/**
+        - id: ms-mesas
+          uri: lb://ms-mesas
+          predicates:
+            - Path=/tables/**
+          filters:
+            - AuthFilter
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
