@@ -8,8 +8,6 @@ eureka:
       default-zone: http://localhost:8761/eureka
   instance:    
     hostname: localhost
-ngrok:
-  enabled: true
   
 spring:
   cloud:
@@ -18,7 +16,10 @@ spring:
         cors-configurations:
           '[/**]':
             allowedOrigins: "*"
-            allowed-methods: "*"
+            allowed-methods:
+            - GET
+            - POST
+            - PUT
             allowed-headers: "*"
             allow-credentials: false
       discovery:
@@ -43,3 +44,6 @@ spring:
           filters:
             - AuthFilter
             - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+ngrok:
+  enabled: true            
