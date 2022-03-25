@@ -13,13 +13,10 @@ spring:
   cloud:
     gateway:
       globalcors:
-        corsConfigurations:
+        cors-configurations:
           '[/**]':
             allowedOrigins: "*"
-            allowed-methods:
-            - GET
-            - POST
-            - PUT
+            allowed-methods: "*"
             allowed-headers: "*"
             allow-credentials: false
       discovery:
