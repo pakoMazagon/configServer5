@@ -29,3 +29,7 @@ spring:
 mongock:
   change-logs-scan-package: rest.elchoco.mesas.config.dbmigrations
 
+logging:
+    level:
+        org.springframework.data.mongodb.core.ReactiveMongoTemplate=DEBUG  
+
