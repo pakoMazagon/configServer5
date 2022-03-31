@@ -18,6 +18,8 @@ spring:
       username: root
       authentication-database: admin
       database: productos
+  jpa:
+    show-sql: true
   jackson:
     serialization:
       fail-on-empty-beans: false
