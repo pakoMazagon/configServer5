@@ -1,0 +1,32 @@
+server:
+  port: ${PORT:${SERVER_PORT:0}}
+  #port: 8082
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:    
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      password: password
+      username: root
+      authentication-database: admin
+      database: productos
+  jpa:
+    show-sql: true
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  main:
+    allow-bean-definition-overriding: true
+
+logging:
+    level:
+        org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG  
+
