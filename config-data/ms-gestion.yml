@@ -28,5 +28,6 @@ spring:
 
 logging:
     level:
-        org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG  
+        root:
+            INFO
 
