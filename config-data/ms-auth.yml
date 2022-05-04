@@ -3,7 +3,7 @@ server:
   #port: 8081  
 eureka:
   client:
-    fetch-registry: false
+    fetch-registry: true
     register-with-eureka: true
     serviceUrl:
       defaultZone: http://eureka:8761/eureka
