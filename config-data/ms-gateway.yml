@@ -45,10 +45,5 @@ spring:
             - AuthFilter
             - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
 
-serveo:
-    enabled: true
-    custom:
-      domain: chocomzgn
-
 #ngrok:
 #  enabled: true            
