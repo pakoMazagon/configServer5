@@ -48,7 +48,7 @@ spring:
 serveo:
     enabled: true
     custom:
-      domain: choco
+      domain: chocomzgn
 
-ngrok:
-  enabled: true            
+#ngrok:
+#  enabled: true            
